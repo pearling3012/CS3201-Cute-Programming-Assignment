@@ -43,18 +43,6 @@ def receive_line(sock):
             break
     return data.decode("utf-8").strip()     
 
-def receive_until_hash(sock):
-    """
-    Receives and prints multiple lines from the server until '#' is encountered.
-    Used for LIST command responses that contain multiple lines.
-    """
-    while True:
-        line = receive_line(sock)
-        print("server:", line)
-        if line.strip() == "#":
-            break
-
-
 # ---------------------------------
 # TASK 1 — Initialize socket
 # ---------------------------------
@@ -182,6 +170,13 @@ def command_wrong(sock):
 # Main
 # -----------------------------
 def main():
+    """
+    Main client loop:
+    1. Initializes socket and connects to server.
+    2. Continuously reads commands from user.
+    3. Dispatches to appropriate command handler.
+    4. Continues until QUIT command or connection failure.
+    """
     sock = initialize_socket()
     connect_to_server(sock)
     print("Connected to server.")
