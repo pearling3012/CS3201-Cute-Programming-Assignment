@@ -133,10 +133,10 @@ def command_list(sock):
             break
         print(f"server: {line}")
 
-def command_remove(sock):
+def command_remove(sock):       
     read_multiline_input(sock)
     response = receive_line(sock)
-    print(response)
+    print(f"server: {response}")
 
 def command_mark(sock):
     """
