@@ -124,9 +124,9 @@ def command_list(sock):
 def command_remove(sock):
     """
     Handles the REMOVE command:
-      • Reads task IDs to remove (multi-line, ends with '#')
-      • Sends IDs to server
-      • Prints server response
+    1. Reads task IDs to remove (multi-line, ends with '#')
+    2. Sends IDs to server
+    3. Prints server response
     """ 
     read_multiline_input(sock)
     response = receive_line(sock)
