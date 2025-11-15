@@ -116,7 +116,7 @@ def command_add(sock):
     2. Sends each line to the server.
     3. Receives server response and prints it.
     """
-    read_multiline_input(sock)
+    read_multiline_input(sock)  
     response = receive_line(sock)
     print(f"server: {response}")
 
@@ -133,7 +133,13 @@ def command_list(sock):
             break
         print(f"server: {line}")
 
-def command_remove(sock):       
+def command_remove(sock):
+    """
+    Handles the REMOVE command:
+      • Reads task IDs to remove (multi-line, ends with '#')
+      • Sends IDs to server
+      • Prints server response
+    """ 
     read_multiline_input(sock)
     response = receive_line(sock)
     print(f"server: {response}")
