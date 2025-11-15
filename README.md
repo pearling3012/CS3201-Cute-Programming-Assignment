@@ -171,30 +171,58 @@ Server listening on port 18222...
 $ make client-test
 Connected to 127.0.0.1:18222
 Connected to server.
+client: WRONG COMMAND
+server: ERROR Command not understood
 client: ADD
-client: Complete CS3201 assignment
-client: Write socket code
-client: Test thoroughly
+client: Buy groceries
+client: Milk and eggs
+client: #
+server: OK
+client: ADD
+client: Attend CS3201
 client: #
 server: OK
 client: LIST
 server: Happy Socket Programming
-server: TASK ID: 0000 | RECEIVED TIME: 2025-01-15 14:30:00 | STATUS: pending
-server: Complete CS3201 assignment
-server: Write socket code
-server: Test thoroughly
-server: #
+STATUS: pending
+server: TASK ID: 0000 | RECEIVED TIME: 2025-10-20 01:21:07 |
+server: Buy groceries
+server: Milk and eggs
+server: TASK ID: 0001 | RECEIVED TIME: 2025-10-20 01:21:15 |
+STATUS: pending
+server: Attend CS3201
 client: MARK
+client: INVALID ID
+client: #
+server: ERROR Invalid ID
+client: MARK
+client:
+0000
+client: #
+server: OK
+client:
+LIST
+server: Happy Socket Programming
+STATUS: completed
+server: TASK ID: 0000 | RECEIVED TIME: 2025-10-20 01:21:07 |
+server: Buy groceries
+server: Milk and eggs
+server: TASK ID: 0001 | RECEIVED TIME: 2025-10-20 01:21:15 |
+STATUS: pending
+server: Attend CS3201
+client: REMOVE
+client: INVALID ID
+client: #
+server: ERROR
+Invalid ID
+client: REMOVE
 client: 0000
+client:
+0001
 client: #
 server: OK
 client: LIST
 server: Happy Socket Programming
-server: TASK ID: 0000 | RECEIVED TIME: 2025-01-15 14:30:00 | STATUS: completed
-server: Complete CS3201 assignment
-server: Write socket code
-server: Test thoroughly
-server: #
 client: QUIT
 server: OK
 ```
