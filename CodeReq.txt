@@ -1,0 +1,11 @@
+  Code Quality
+
+We cannot specify completely the coding style that we would like to see but it includes the following:
+
+Proper decomposition of a program into subroutines (and multiple source code files when necessary) -- A 500 line program as a single routine won't suffice.
+Comment---judiciously, but not profusely. Comments also serve to help a marker, in addition to yourself. To further elaborate:
+Your favorite quote from Star Wars or Douglas Adams' Hitch-hiker's Guide to the Galaxy does not count as comments. In fact, they simply count as anti-comments and will result in reduction of marks.
+Comment your code in English. It is the language of instruction of the university.
+Proper variable names -- leiais not a good variable name, it never was and never will be.
+Use a small number of global variables, if any. Most programs need a very small number of global variables if any. (If you have a global variable named temp, think again.)
+The return values from all function calls should be checked and all values should be dealt with appropriately.

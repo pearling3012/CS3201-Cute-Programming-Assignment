@@ -1,0 +1,53 @@
+List of Tasks
+Task 1: Socket initialization
+
+Description: initialize and create the TCP socket.
+
+ 
+
+Task 2: Initiate the connection request
+
+Description:
+
+Input the server IP and port.
+Initiate a connection on a socket.
+Tips:
+
+To establish the connection to the server, you need to input the server’s IP Address and Port Number. The client program should obtain the server IP address and port number either from command-line arguments (as illustrated in the example in Figure 1) or by reading them from standard input (e.g., using Python's input() function, C++'s cin etc.). Both approaches are acceptable.
+
+How to find your IP address:
+
+Linux or Mac: Type ifconfigin terminal
+Windows: Network & Internet settings -> network properties
+ 
+
+Task 3: Send command to the server
+
+Description: send the command to the server.
+
+ADD: the program continues to accept the user input until entering a line that consists only of a '#' followed by a newline character '\n'.
+LIST: send this command to the server.
+REMOVE: the program continues to accept the task IDs for removal until entering a line that consists only of a '#' followed by a newline character '\n'.
+MARK: the program continues to accept the task IDs for marking until entering a line that consists only of a '#' followed by a newline character '\n'.
+QUIT: send this command to the server.
+Other cases: send this command to the server.
+Kind hint: When sending a message to the server, include the newline character ('\n') with it. For example, when sending "LIST" to the server, send "LIST\n" instead of "LIST"; when sending '#' to the server, send '#\n' instead of '#'. Don't forget '\n'.
+
+ 
+
+Task 4: Receive message from the server.
+
+Description: receive the message from the server and perform the corresponding action.
+
+ADD: if "OK" is received, it indicates that the server has successfully received all of the tasks from clients. Print out "OK" and then allow the user to input the next command.
+LIST: receive all tasks from server and print them to the screen. Then, allow the user to input the next command.
+REMOVE: if "OK" is received, it indicates that the removal is successful. If “ERROR - Invalid ID” is received, it indicates that the removal is unsuccessful. You should print "OK" or the error information to the standard output.
+MARK: if "OK" is received, it indicates that the marking is successful. If “ERROR - Invalid ID” is received, it indicates that the marking is unsuccessful. You should print "OK" or the error information to the standard output.
+QUIT: if "OK" is received, it indicates that the server has successfully received this command. You should first print "OK" to the standard output, and then the client should actively close the socket and exit (see Task 5).
+Other cases: the client program receives the error message "ERROR - Command not understood" that is sent by the server. Print out the error message and allow the user to input another command.
+ 
+
+Task 5: Close socket
+
+Description: After the client has sent the "QUIT" command and received "OK" from the server in response, the client program should then shut down the socket and close the connection socket (e.g., using shutdown() followed by close() in Python).
+
