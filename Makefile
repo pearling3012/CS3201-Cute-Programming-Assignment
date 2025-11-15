@@ -4,8 +4,8 @@
 PYTHON = python3
 
 # Files
-SERVER = TodoTrackerServer.py
-CLIENT = TodoTrackerClient.py
+SERVER = TodoTrackerServer_59257310_59016540.py
+CLIENT = TodoTrackerClient_59257310_59016540.py
 
 # Default server IP and port
 SERVER_IP = 127.0.0.1
