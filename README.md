@@ -22,8 +22,6 @@ CS3201/
 ├── TodoTrackerClient.py    # Client application
 ├── Makefile                # Build and run commands
 ├── README.md              # This file
-├── Task.txt               # Implementation task descriptions
-├── CodeReq.txt            # Code quality requirements
 └── Report.pdf             # Project report
 ```
 
